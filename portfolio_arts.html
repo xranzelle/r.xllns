@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector Arts | Works</title>
+
+    <link rel="stylesheet" href="styles/header-footer.css">
+    <link rel="stylesheet" href="styles/portfolio_category.css">
+    <link rel="icon" href="images/ranzlogo1.png" type="image/png" sizes="16x16">
+</head>
+
+<body>
+
+    <!-- FLOATING BG -->
+
+    <div class="bg-shape shape1"></div>
+    <div class="bg-shape shape2"></div>
+    <div class="bg-shape shape3"></div>
+
+    <!-- NAVBAR -->
+
+    <header class="header">
+
+        <div class="logo">
+            <a href="index.html">
+                <h2>r.xllns</h2>
+            </a>
+        </div>
+
+        <!-- HAMBURGER -->
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- NAVIGATION -->
+
+        <nav class="nav">
+            <a href="index.html">home</a>
+            <a href="about.html">about</a>
+
+            <!-- DROPDOWN -->
+
+            <div class="dropdown">
+                <div class="dropdown-top">
+                    <a href="portfolio.html" class="dropdown-link active">works</a>
+
+                    <button class="dropdown-toggle">
+                        <span class="arrow">▾</span>
+                    </button>
+
+                </div>
+
+                <div class="dropdown-menu">
+                    <a href="portfolio_logo.html">Logos</a>
+                    <a href="portfolio_arts.html" class="active">Vector Arts</a>
+                    <a href="portfolio_graphic.html">Graphic Design</a>
+                    <a href="portfolio_poster.html">Posters</a>
+                    <a href="portfolio_video.html">Motion Graphics</a>
+                    <a href="portfolio_design.html">Design & UI</a>
+                </div>
+            </div>
+
+            <a href="contact.html">contact</a>
+        </nav>
+
+    </header>
+
+    <section class="portfolio-category">
+
+        <!-- BACKGROUND -->
+
+        <div class="bg-blur blur1"></div>
+        <div class="bg-blur blur2"></div>
+
+        <!-- HEADER -->
+
+        <div class="category-header">
+
+            <span class="mini-label">
+                PORTFOLIO CATEGORY
+            </span>
+
+            <h1>
+                Vector Arts
+            </h1>
+
+            <p>
+                A collection of vector illustrations and digital artworks
+                crafted with clean lines, vibrant colors, and creative
+                visual storytelling for personal projects, concepts,
+                and artistic explorations.
+            </p>
+
+        </div>
+
+        <!-- GALLERY -->
+
+        <div class="photo-container">
+            <div class="photo-gallery">
+                <div class="photo">
+                    <img src="images/portfolio/vector-art/catriona-gray.jpg" alt="Vectorized image of Catriona Gray">
+                    <span class="caption">Catriona Gray</span>
+                </div>
+                <div class="photo">
+                    <img src="images/portfolio/vector-art/blackpink.jpg" alt="Vectorized image of Blackpink">
+                    <span class="caption">Blackpink</span>
+                </div>
+                <div class="photo">
+                    <img src="images/portfolio/vector-art/chibi-version.jpg" alt="Vectorized image of Ranzelle (Chibi)">
+                    <span class="caption">Ranzelle (Chibi)</span>
+                </div>
+                <div class="photo">
+                    <img src="images/portfolio/vector-art/ranz'-vector.jpg" alt="Vectorized image of Ranzelle">
+                    <span class="caption">Ranzelle</span>
+                </div>
+                <div class="photo">
+                    <img src="images/portfolio/vector-art/iu.jpg" alt="Vectorized image of IU">
+                    <span class="caption">IU</span>
+                </div>
+                <div class="photo">
+                    <img src="images/portfolio/vector-art/jung-hae-in.jpg" alt="Vectorized image of Jung Hae In">
+                    <span class="caption">Jung Hae In</span>
+                </div>
+                <div class="photo">
+                    <img src="images/portfolio/vector-art/kim-soo-hyun.jpg" alt="Vectorized image of Kim Soo Hyun">
+                    <span class="caption">Kim Soo Hyun</span>
+                </div>
+                <div class="photo">
+                    <img src="images/portfolio/vector-art/nam-joo-hyuk.jpg" alt="Vectorized image of Nam Joo Hyuk">
+                    <span class="caption">Nam Joo Hyuk</span>
+                </div>
+                <div class="photo">
+                    <img src="images/portfolio/vector-art/park-seo-joon.jpg" alt="Vectorized image of Park Seo Joon">
+                    <span class="caption">Park Seo Joon</span>
+                </div>
+                <div class="photo">
+                    <img src="images/portfolio/vector-art/taylor-swift.jpg" alt="Vectorized image of Taylor Swift">
+                    <span class="caption">Taylor Swift</span>
+                </div>
+                <div class="photo">
+                    <img src="images/portfolio/vector-art/win-metawin.jpg" alt="Vectorized image of Win Metawin">
+                    <span class="caption">Win Metawin</span>
+                </div>
+            </div>
+
+            <!-- Lightbox Section -->
+            <div id="lightbox" class="lightbox" hidden>
+                <span class="close" onclick="closeLightbox()">×</span>
+                <div class="lightbox-content">
+                    <img class="lightbox-image" id="lightbox-img" src="" alt="">
+                    <div class="caption-lightbox" id="lightbox-caption"></div>
+                </div>
+                <button class="prev" onclick="changeImage(-1)">❮</button>
+                <button class="next" onclick="changeImage(1)">❯</button>
+            </div>
+        </div>
+
+        <!-- NAVIGATION -->
+
+        <div class="portfolio-navigation">
+
+            <!-- PREVIOUS -->
+
+            <a href="portfolio_logo.html" class="nav-card prev-card">
+
+                <div class="nav-icon">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <path d="M15 18l-6-6 6-6" />
+
+                    </svg>
+
+                </div>
+
+                <div class="nav-text">
+
+                    <span>Previous Category</span>
+
+                    <h3>Logos</h3>
+
+                </div>
+
+            </a>
+
+            <!-- CENTER -->
+
+            <a href="portfolio.html" class="portfolio-center-btn">
+
+                Back to Portfolio
+
+            </a>
+
+            <!-- NEXT -->
+
+            <a href="portfolio_graphic.html" class="nav-card next-card">
+
+                <div class="nav-text">
+
+                    <span>Next Category</span>
+
+                    <h3>Graphic Design</h3>
+
+                </div>
+
+                <div class="nav-icon">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <path d="M9 18l6-6-6-6" />
+
+                    </svg>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <script src="scripts/lightbox.js"></script>
+    <script src="scripts/dropdown.js"></script>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <h2>r.xllns</h2>
+
+                <p>
+                    Designing visuals with
+                    personality and purpose.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <a href="https://www.facebook.com/x.y.ranz.elle" target="_blank">facebook</a>
+                <a href="https://www.instagram.com/x.y.ranz.elle/" target="_blank">instagram</a>
+                <a href="https://www.youtube.com/@x_ranz_elle" target="_blank">youtube</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Ranzelle Paulino.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

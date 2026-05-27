@@ -1,0 +1,875 @@
+* {
+    text-decoration: none;
+}
+
+.portfolio-category {
+
+    width: 100%;
+
+    padding: 120px 8%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* GLOBAL */
+
+* {
+
+    box-sizing: border-box;
+}
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+}
+
+/* =========================================
+   BACKGROUND BLURS
+========================================= */
+
+.bg-blur {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    z-index: -1;
+}
+
+.blur1 {
+
+    width: 320px;
+    height: 320px;
+
+    background: #ffd8c2;
+
+    top: 0;
+    left: -120px;
+}
+
+.blur2 {
+
+    width: 320px;
+    height: 320px;
+
+    background: #dce8ff;
+
+    right: -120px;
+    bottom: 100px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.category-header {
+
+    max-width: 850px;
+
+    margin-bottom: 80px;
+}
+
+.mini-label {
+
+    display: inline-block;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #ff8a65;
+
+    margin-bottom: 18px;
+}
+
+.category-header h1 {
+
+    font-size: 100px;
+
+    line-height: 0.9;
+
+    letter-spacing: -6px;
+
+    margin-bottom: 24px;
+
+    color: #1f1f1f;
+}
+
+.category-header p {
+
+    max-width: 650px;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #666;
+}
+/* =========================================
+        PROJECT GRID
+========================================= */
+
+.projects {
+
+    width: 100%;
+
+    padding: 0 8% 110px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 42px;
+}
+
+/* =========================================
+        CARD
+========================================= */
+
+.project {
+
+    position: relative;
+}
+
+/* STACK EFFECT */
+
+.project::before,
+.project::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: white;
+
+    border-radius: 28px;
+
+    z-index: -2;
+}
+
+.project::before {
+
+    transform:
+        rotate(-1deg);
+
+    top: 10px;
+
+    opacity: 0.45;
+}
+
+.project::after {
+
+    transform:
+        rotate(1deg);
+
+    top: 18px;
+
+    opacity: 0.25;
+}
+
+/* MAIN PAPER */
+
+.paper {
+
+    background: white;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 24px 50px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100%;
+}
+
+/* =========================================
+        SLIDER
+        ========================================= */
+
+.slider {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #f4f4f4;
+}
+
+.slides {
+
+    display: flex;
+
+    transition: 0.5s ease;
+}
+
+.slide {
+
+    min-width: 100%;
+}
+
+/* IMPORTANT:
+           SAME SIZE LAHAT
+           KITA WHOLE IMAGE
+        */
+
+.slide img {
+
+    width: 100%;
+
+    height: 340px;
+
+    object-fit: contain;
+
+    background: #f5f5f5;
+
+    padding: 14px;
+}
+
+/* =========================================
+        BUTTONS
+        ========================================= */
+
+.slider-btn {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 46px;
+    height: 46px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    backdrop-filter: blur(10px);
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: 0.3s ease;
+}
+
+.slider-btn:hover {
+
+    background: #3a86ff;
+
+    color: white;
+}
+
+.prev {
+
+    left: 16px;
+}
+
+.next {
+
+    right: 16px;
+}
+
+/* =========================================
+        DOTS
+        ========================================= */
+
+.dots {
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 18px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 8px;
+}
+
+.dot {
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 255, 255, 0.5);
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.dot.active {
+
+    width: 28px;
+
+    background: white;
+}
+
+/* =========================================
+        CONTENT
+        ========================================= */
+
+.content {
+
+    padding: 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+}
+
+.tag {
+
+    display: inline-flex;
+
+    width: fit-content;
+
+    padding: 9px 14px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 138, 101, 0.12);
+
+    color: #ff8a65;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+}
+
+.content h2 {
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 18px;
+
+    min-height: 62px;
+}
+
+.content p {
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #666;
+
+    min-height: 78px;
+
+    flex: 1;
+}
+
+/* =========================================
+        NAVIGATION
+        ========================================= */
+
+.navigation {
+
+    width: 100%;
+
+    padding: 0 8% 100px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+.navigation a {
+
+    height: 56px;
+
+    padding: 0 30px;
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 999px;
+
+    background: white;
+
+    color: #1f1f1f;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.navigation a:hover {
+
+    background: #ff8a65;
+
+    color: white;
+
+    transform: translateY(-4px);
+}
+
+/* =========================================
+        TABLET
+        ========================================= */
+
+@media(max-width: 1000px) {
+
+    .projects {
+
+        grid-template-columns: 1fr;
+    }
+
+    .slide img {
+
+        height: 420px;
+    }
+}
+
+/* =========================================
+        MOBILE
+        ========================================= */
+
+@media(max-width: 768px) {
+
+    .hero {
+
+        padding: 90px 6% 60px;
+    }
+
+    .hero h1 {
+
+        font-size: 48px;
+
+        letter-spacing: -2px;
+    }
+
+    .projects {
+
+        padding: 0 6% 80px;
+
+        gap: 34px;
+    }
+
+    .slide img {
+
+        height: 240px;
+    }
+
+    .content {
+
+        padding: 22px;
+    }
+
+    .content h2 {
+
+        font-size: 25px;
+
+        min-height: auto;
+    }
+
+    .content p {
+
+        min-height: auto;
+    }
+
+    .navigation {
+
+        padding: 0 6% 80px;
+    }
+
+    .navigation a {
+
+        width: 100%;
+    }
+}
+
+/* =========================================
+PORTFOLIO NAVIGATION
+========================================= */
+
+.portfolio-navigation {
+
+    width: 100%;
+
+    margin-top: 90px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+/* =========================================
+NAVIGATION CARD
+========================================= */
+
+.nav-card {
+
+    position: relative;
+
+    width: 320px;
+
+    min-height: 88px;
+
+    padding: 20px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 16px;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.75),
+            rgba(255,255,255,0.45)
+        );
+
+    backdrop-filter: blur(16px);
+
+    border:
+        1px solid rgba(255,255,255,0.55);
+
+    box-shadow:
+        0 14px 30px rgba(0,0,0,0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* =========================================
+SHINE
+========================================= */
+
+.nav-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -120%;
+    left: -50%;
+
+    width: 180%;
+    height: 220%;
+
+    background:
+        linear-gradient(
+            115deg,
+            transparent 20%,
+            rgba(255,255,255,0.22) 50%,
+            transparent 80%
+        );
+
+    transform: rotate(25deg);
+
+    transition: 0.7s ease;
+
+    pointer-events: none;
+}
+
+/* =========================================
+HOVER
+========================================= */
+
+.nav-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 38px rgba(0,0,0,0.10);
+}
+
+.nav-card:hover::before {
+
+    left: 120%;
+}
+
+.nav-card:hover .nav-text h3 {
+
+    color: #3a86ff;
+}
+
+/* =========================================
+ICON
+========================================= */
+
+.nav-icon {
+
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background:
+        rgba(255,255,255,0.5);
+
+    backdrop-filter: blur(10px);
+}
+
+.nav-icon svg {
+
+    width: 18px;
+    height: 18px;
+
+    fill: none;
+
+    stroke: #1f1f1f;
+
+    stroke-width: 2.2;
+}
+
+/* =========================================
+TEXT
+========================================= */
+
+.nav-text {
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+.nav-text span {
+
+    display: block;
+
+    font-size: 10px;
+
+    letter-spacing: 1.8px;
+
+    text-transform: uppercase;
+
+    color: #999;
+
+    margin-bottom: 6px;
+}
+
+.nav-text h3 {
+
+    font-size: 20px;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.8px;
+
+    color: #1f1f1f;
+
+    transition: 0.3s ease;
+}
+
+/* =========================================
+ALIGNMENT
+========================================= */
+
+.prev-card {
+
+    text-align: left;
+}
+
+.next-card {
+
+    text-align: right;
+}
+
+/* =========================================
+CENTER BUTTON
+========================================= */
+
+.portfolio-center-btn {
+
+    height: 88px;
+
+    padding: 0 34px;
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 24px;
+
+    background: #1f1f1f;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    box-shadow:
+        0 14px 30px rgba(0,0,0,0.10);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.portfolio-center-btn:hover {
+
+    background: #3a86ff;
+
+    transform: translateY(-5px);
+}
+
+/* =========================================
+IF ONLY 2 BUTTONS
+========================================= */
+
+.portfolio-navigation:has(.nav-card:only-child),
+.portfolio-navigation:has(.nav-card:nth-child(2):last-child) {
+
+    justify-content: center;
+}
+
+/* =========================================
+TABLET
+========================================= */
+
+@media(max-width: 950px) {
+
+    .portfolio-navigation {
+
+        gap: 16px;
+    }
+
+    .nav-card {
+
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .portfolio-center-btn {
+
+        width: 100%;
+    }
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media(max-width: 768px) {
+
+    .portfolio-navigation {
+
+        margin-top: 70px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 14px;
+    }
+
+    .nav-card {
+
+        width: 100%;
+
+        min-height: 82px;
+
+        padding: 18px 20px;
+
+        border-radius: 20px;
+    }
+
+    .nav-icon {
+
+        width: 42px;
+        height: 42px;
+
+        border-radius: 12px;
+    }
+
+    .nav-icon svg {
+
+        width: 16px;
+        height: 16px;
+    }
+
+    .nav-text span {
+
+        font-size: 9px;
+    }
+
+    .nav-text h3 {
+
+        font-size: 18px;
+    }
+
+    .portfolio-center-btn {
+
+        width: 100%;
+
+        height: 54px;
+
+        border-radius: 18px;
+
+        font-size: 13px;
+    }
+}

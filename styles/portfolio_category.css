@@ -1,0 +1,646 @@
+* {
+    text-decoration: none;
+}
+
+.portfolio-category {
+
+    width: 100%;
+
+    padding: 120px 8%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* GLOBAL */
+
+* {
+
+    box-sizing: border-box;
+}
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+}
+
+/* =========================================
+   BACKGROUND BLURS
+========================================= */
+
+.bg-blur {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    z-index: -1;
+}
+
+.blur1 {
+
+    width: 320px;
+    height: 320px;
+
+    background: #ffd8c2;
+
+    top: 0;
+    left: -120px;
+}
+
+.blur2 {
+
+    width: 320px;
+    height: 320px;
+
+    background: #dce8ff;
+
+    right: -120px;
+    bottom: 100px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.category-header {
+
+    max-width: 850px;
+
+    margin-bottom: 80px;
+}
+
+.mini-label {
+
+    display: inline-block;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #ff8a65;
+
+    margin-bottom: 18px;
+}
+
+.category-header h1 {
+
+    font-size: 100px;
+
+    line-height: 0.9;
+
+    letter-spacing: -6px;
+
+    margin-bottom: 24px;
+
+    color: #1f1f1f;
+}
+
+.category-header p {
+
+    max-width: 650px;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #666;
+}
+
+/* =========================================
+PORTFOLIO NAVIGATION
+========================================= */
+
+.portfolio-navigation {
+
+    width: 100%;
+
+    margin-top: 90px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+/* =========================================
+NAVIGATION CARD
+========================================= */
+
+.nav-card {
+
+    position: relative;
+
+    width: 320px;
+
+    min-height: 88px;
+
+    padding: 20px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 16px;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.75),
+            rgba(255,255,255,0.45)
+        );
+
+    backdrop-filter: blur(16px);
+
+    border:
+        1px solid rgba(255,255,255,0.55);
+
+    box-shadow:
+        0 14px 30px rgba(0,0,0,0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* =========================================
+SHINE
+========================================= */
+
+.nav-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -120%;
+    left: -50%;
+
+    width: 180%;
+    height: 220%;
+
+    background:
+        linear-gradient(
+            115deg,
+            transparent 20%,
+            rgba(255,255,255,0.22) 50%,
+            transparent 80%
+        );
+
+    transform: rotate(25deg);
+
+    transition: 0.7s ease;
+
+    pointer-events: none;
+}
+
+/* =========================================
+HOVER
+========================================= */
+
+.nav-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 38px rgba(0,0,0,0.10);
+}
+
+.nav-card:hover::before {
+
+    left: 120%;
+}
+
+.nav-card:hover .nav-text h3 {
+
+    color: #3a86ff;
+}
+
+/* =========================================
+ICON
+========================================= */
+
+.nav-icon {
+
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background:
+        rgba(255,255,255,0.5);
+
+    backdrop-filter: blur(10px);
+}
+
+.nav-icon svg {
+
+    width: 18px;
+    height: 18px;
+
+    fill: none;
+
+    stroke: #1f1f1f;
+
+    stroke-width: 2.2;
+}
+
+/* =========================================
+TEXT
+========================================= */
+
+.nav-text {
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+.nav-text span {
+
+    display: block;
+
+    font-size: 10px;
+
+    letter-spacing: 1.8px;
+
+    text-transform: uppercase;
+
+    color: #999;
+
+    margin-bottom: 6px;
+}
+
+.nav-text h3 {
+
+    font-size: 20px;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.8px;
+
+    color: #1f1f1f;
+
+    transition: 0.3s ease;
+}
+
+/* =========================================
+ALIGNMENT
+========================================= */
+
+.prev-card {
+
+    text-align: left;
+}
+
+.next-card {
+
+    text-align: right;
+}
+
+/* =========================================
+CENTER BUTTON
+========================================= */
+
+.portfolio-center-btn {
+
+    height: 88px;
+
+    padding: 0 34px;
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 24px;
+
+    background: #1f1f1f;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    box-shadow:
+        0 14px 30px rgba(0,0,0,0.10);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.portfolio-center-btn:hover {
+
+    background: #3a86ff;
+
+    transform: translateY(-5px);
+}
+
+/* =========================================
+IF ONLY 2 BUTTONS
+========================================= */
+
+.portfolio-navigation:has(.nav-card:only-child),
+.portfolio-navigation:has(.nav-card:nth-child(2):last-child) {
+
+    justify-content: center;
+}
+
+/* =========================================
+TABLET
+========================================= */
+
+@media(max-width: 950px) {
+
+    .portfolio-navigation {
+
+        gap: 16px;
+    }
+
+    .nav-card {
+
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .portfolio-center-btn {
+
+        width: 100%;
+    }
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media(max-width: 768px) {
+
+    .portfolio-navigation {
+
+        margin-top: 70px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 14px;
+    }
+
+    .nav-card {
+
+        width: 100%;
+
+        min-height: 82px;
+
+        padding: 18px 20px;
+
+        border-radius: 20px;
+    }
+
+    .nav-icon {
+
+        width: 42px;
+        height: 42px;
+
+        border-radius: 12px;
+    }
+
+    .nav-icon svg {
+
+        width: 16px;
+        height: 16px;
+    }
+
+    .nav-text span {
+
+        font-size: 9px;
+    }
+
+    .nav-text h3 {
+
+        font-size: 18px;
+    }
+
+    .portfolio-center-btn {
+
+        width: 100%;
+
+        height: 54px;
+
+        border-radius: 18px;
+
+        font-size: 13px;
+    }
+}
+
+.photo-container {
+    max-width: 1224px;
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.photo-gallery {
+    column-width: 300px;
+    column-gap: 20px;
+}
+
+.photo {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 95%;
+    display: none;
+    text-align: center;
+}
+
+.photo:hover .caption {
+    display: block;
+    text-align: center;
+}
+
+#lightbox {
+    display: none;
+}
+
+.lightbox {
+    display: flex;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.lightbox-content {
+    text-align: center;
+    position: relative;
+}
+
+.lightbox-image {
+    max-width: 90vw;
+    max-height: 80vh;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.caption-lightbox {
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    z-index: 1;
+}
+
+.lightbox button:hover {
+    color:#3a86ff;
+    background-color: transparent;
+}
+
+.lightbox .close,
+.lightbox .prev,
+.lightbox .next {
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    background: transparent;
+    border: none;
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.45),
+        0 0 15px rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+}
+
+.lightbox .close {
+    top: 15px;
+    right: 35px;
+}
+
+.lightbox .prev {
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+.lightbox .next {
+    right: 15px;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 1024px) {
+    .photo:hover .caption {
+        display: none;
+        text-align: center;
+    }
+}
+
+#lightbox .lightbox-image {
+    border-radius: 10px;
+    background-color: #ededed;
+    padding: 10px;
+    object-fit: contain;
+}
+
+.prev,
+.next {
+    width: 8%;
+    height: 20%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0d1b2a30;
+    z-index: 2;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+
+    .lightbox .close,
+    .lightbox .prev,
+    .lightbox .next {
+
+        color: #666;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .lightbox .close,
+    .lightbox .prev,
+    .lightbox .next {
+
+        color: #666;
+    }
+}

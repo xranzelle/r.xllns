@@ -1,3 +1,19 @@
 @import url(global.css);
 @import url(header.css);
 @import url(footer.css);
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.logo h2 {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}

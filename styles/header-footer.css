@@ -2,10 +2,12 @@
 @import url(header.css);
 @import url(footer.css);
 
-.logo {
+.logo a {
     display: flex;
     align-items: center;
     gap: 5px;
+    text-decoration: none;
+    color: inherit;
 }
 
 .logo img {
